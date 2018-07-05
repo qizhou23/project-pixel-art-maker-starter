@@ -4,18 +4,16 @@ let color = '';
 const gridHeight = document.getElementById('inputHeight').value;
 const gridWidth = document.getElementById('inputWidth').value ;
 // When size is submitted by the user, call makeGrid()
-document.getElementById('submit').addEventListener("click",makeGrid);
+document.getElementById('submit').addEventListener("click",makeGrid());
 
 function makeGrid() {
-    console.log('success start it');
+    console.log("success start it");
     let i;
     let j;
-    const table = document.getElementById('pixelCanvas');
+    const pixelCanvas = document.getElementById('pixelCanvas');
     for(i=0;i<gridHeight;i++) {
-        addTr(table);
-        for(j=0;j<gridWidth;j++) {
-            addTh();
-        }
+        let gridRow = document.createElement('tr');
+        pixelCanvas.appendChild(gridRow);
     }
 }
 
