@@ -4,9 +4,10 @@ let color = '';
 const gridHeight = document.getElementById('inputHeight').value;
 const gridWidth = document.getElementById('inputWidth').value ;
 // When size is submitted by the user, call makeGrid()
-
+document.getElementById('submit').addEventListener("click",makeGrid);
 
 function makeGrid() {
+    console.log('success start it');
     let i;
     let j;
     const table = document.getElementById('pixelCanvas');
@@ -25,7 +26,9 @@ function addTr(table){
 }
 
 //增加表格列
-function addTr(table){
+function addTr(){
     const newTh = document.createElement("th"); 
     tr.appendChild(newTh); 
 }
+
+//
